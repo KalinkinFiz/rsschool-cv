@@ -1,7 +1,5 @@
 # MAXIM KALININ
 <br>
-
-
 ## Contacts
 **E-Mail:** kalinkin.fiz@gmail.com<br>
 **Social:** [VK](https://vk.com/kalinkin_fiz), [GitHub](https://github.com/KalinkinFiz)
@@ -37,5 +35,6 @@ Belarusian State Pedagogical University named after Maxim Tank (BSPU)
 * JS
 * JAVA
 * C#
+* C++
 ## English level
 **Pre-intermediate**
