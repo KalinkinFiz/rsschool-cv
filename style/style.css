@@ -8,7 +8,7 @@ body {
 }
 
 body:last-child {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .content {
@@ -48,6 +48,7 @@ h3 {
 .secondary a,
 .date {
   color: #777777;
+  text-decoration: none;
 }
 
 ul {
@@ -113,6 +114,7 @@ a {
 .contacts a {
   display: flex;
   margin-left: 15px;
+  text-decoration: none;
 }
 
 ul.contacts {
