@@ -8,15 +8,7 @@ body {
 }
 
 body:last-child {
-<<<<<<< HEAD
-<<<<<<< HEAD
   margin-bottom: 20px;
-=======
-  margin-bottom: 40px;
->>>>>>> 88ce36d... ref: change structure of the project
-=======
-  margin-bottom: 20px;
->>>>>>> cf06753... ref: minor changes
 }
 
 .content {
@@ -56,14 +48,7 @@ h3 {
 .secondary a,
 .date {
   color: #777777;
-<<<<<<< HEAD
-<<<<<<< HEAD
   text-decoration: none;
-=======
->>>>>>> 88ce36d... ref: change structure of the project
-=======
-  text-decoration: none;
->>>>>>> cf06753... ref: minor changes
 }
 
 ul {
@@ -129,14 +114,7 @@ a {
 .contacts a {
   display: flex;
   margin-left: 15px;
-<<<<<<< HEAD
-<<<<<<< HEAD
   text-decoration: none;
-=======
->>>>>>> 88ce36d... ref: change structure of the project
-=======
-  text-decoration: none;
->>>>>>> cf06753... ref: minor changes
 }
 
 ul.contacts {
