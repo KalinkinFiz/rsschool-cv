@@ -102,6 +102,18 @@ a {
   border-radius: 50%;
 }
 
+.date {
+  display: block;
+  font-style: italic;
+  font-size: 70%;
+}
+
+.main-education {
+  padding: 20px;
+  background-color: #f8f7f5;
+  color: black;
+}
+
 .code-example {
   cursor: pointer;
   margin-bottom: 30px;
@@ -157,19 +169,6 @@ ul.contacts li.icons {
   margin-left: 10px;
   width: 30px;
 }
-
-.date {
-  display: block;
-  font-style: italic;
-  font-size: 70%;
-}
-
-.main-education {
-  padding: 20px;
-  background-color: #f8f7f5;
-  color: black;
-}
-
 
 @media (max-width: 1024px) {
   header {
