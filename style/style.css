@@ -11,12 +11,8 @@ body:last-child {
   margin-bottom: 20px;
 }
 
-.content {
-  display: inline-block;
-  width: 80%;
-  max-width: 1024px;
-  padding-top: 40px;
-  text-align: left;
+a {
+  text-decoration: none;
 }
 
 h2,
@@ -44,8 +40,19 @@ h3 {
   letter-spacing: 0.08em;
 }
 
+
+
+.content {
+  display: inline-block;
+  width: 80%;
+  max-width: 1024px;
+  padding-top: 40px;
+  text-align: left;
+}
+
 .secondary,
 .secondary a,
+.projects,
 .date {
   color: #777777;
   text-decoration: none;
@@ -70,12 +77,6 @@ a {
   color: black;
 }
 
-@media (max-width: 1024px) {
-  header {
-    text-align: center;
-  }
-}
-
 .photo,
 .title {
   display: inline-block;
@@ -90,25 +91,26 @@ a {
   border-radius: 50%;
 }
 
-@media (max-width: 585px) {
-  h1 {
-    font-size: 250%;
-    line-height: 100%;
-  }
-
-  .photo {
-    width: calc(var(--photo-size) / 1.2);
-    height: calc(var(--photo-size) / 1.2);
-    margin-bottom: 18px;
-  }
+.code-example {
+  cursor: pointer;
+  margin-bottom: 30px;
 }
 
-.contacts p {
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.projects figure {
   margin: 0;
-  font-style: italic;
-  font-size: 80%;
-  line-height: 160%;
-  white-space: pre-wrap;
+}
+
+.projects figure img {
+  width: 100%;
+  max-width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
 .contacts a {
@@ -133,6 +135,7 @@ ul.contacts li.icons {
 .contacts {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .icons {
@@ -141,7 +144,7 @@ ul.contacts li.icons {
 
 .icons a img {
   margin-left: 10px;
-  width: 40px;
+  width: 30px;
 }
 
 .date {
@@ -154,4 +157,28 @@ ul.contacts li.icons {
   padding: 20px;
   background-color: #f8f7f5;
   color: black;
+}
+
+
+@media (max-width: 1024px) {
+  header {
+    text-align: center;
+  }
+
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 585px) {
+  h1 {
+    font-size: 250%;
+    line-height: 100%;
+  }
+
+  .photo {
+    width: calc(var(--photo-size) / 1.2);
+    height: calc(var(--photo-size) / 1.2);
+    margin-bottom: 18px;
+  }
 }

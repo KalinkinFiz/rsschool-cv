@@ -8,8 +8,16 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&display=swap"
       rel="stylesheet"
     />
-    <title>Kalinin Maxim</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/base16/github.min.css"
+    />
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
     <link rel="stylesheet" href="./style/style.css" />
+    <title>Kalinin Maxim</title>
   </head>
   <body>
     <div class="content">
@@ -22,105 +30,251 @@
         <div class="title">
           <h1>Kalinin Maxim</h1>
           <address>
-            <p class="contacts">
-              ⚑ Minsk, Belarus +375 29 766–93–69℡
-              <a href="mailto:kalinkin.fiz@gmail.com">kalinkin.fiz@gmail.com</a>
+            <ul class="contacts">
+              <li>⚑ Minsk, Belarus</li>
+              <li>+375 29 766–93–69℡</li>
+              <li>
+                <a href="mailto:kalinkin.fiz@gmail.com"
+                  >kalinkin.fiz@gmail.com</a
+                >
+              </li>
+              <li class="icons">
+                <a href="https://github.com/KalinkinFiz" target="_blank"
+                  ><img
+                    src="./assets/github.svg"
+                    alt="Image-link to Github account"
+                /></a>
+                <a href="https://vk.com/kalinkin_fiz" target="_blank"
+                  ><img src="./assets/vk.svg" alt="Image-link to VK account"
+                /></a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </header>
+
+      <main>
+        <article>
+          <h2>About me</h2>
+          <p class="secondary">
+            Immediately after school, he entered the specialty “Physics and
+            Informatics” at the Belarusian State Pedagogical University, which
+            he graduated in 2017. For continuing education and a more in-depth
+            study of computer science, he entered the magistracy. I am currently
+            studying in depth distributed information systems and network
+            technologies.
+          </p>
+
+          <section>
+            <h2>Education</h2>
+            <p class="main-education">
+              <strong
+                >MASTER, TEACHING AND EDUCATION METHODOLOGY
+                (INFORMATICS)</strong
+              >
+              <br />Belarusian State Pedagogical University named after Maxim
+              Tank (BSPU) Thesis title: Technological competence of future
+              teachers of physics and informatics when working with laboratory
+              stands
+              <span class="date">2017 - 2018</span>
+            </p>
+
+            <p class="main-education">
+              <strong>BSc, PHYSICS AND INFORMATICS</strong> <br />
+              Belarusian State Pedagogical University named after Maxim Tank
+              (BSPU)
+              <span class="date">2013 - 2017</span>
+            </p>
+          </section>
+
+          <section>
+            <h2>Work experience</h2>
+            <p class="main-education">
+              <strong>TEACHER «INFORMATICS»</strong> <br />
+              Lyceum №2, Minsk
+              <span class="date">2019 - Present</span>
+            </p>
+
+            <p class="main-education">
+              <strong>LECTURER</strong> <br />
+              International university “MITSO”
+              <span class="date">2018 - Present</span>
+            </p>
+
+            <p class="main-education">
+              <strong>SOFTWARE ENGINEER</strong> <br />
+              Belarusian State Pedagogical University named after Maxim Tank
+              (BSPU)
+              <span class="date">2017 - 2019</span>
+            </p>
+          </section>
+
+          <section>
+            <h2>Skills</h2>
+            <div class="secondary">
+              <ul>
+                <li>HTML5/CSS3</li>
+                <li>JS (ES5, ES6)</li>
+                <li>Node.js</li>
+                <li>Node.js in AWS</li>
+                <li>Java</li>
+                <li>C#</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Code example</h2>
+            <div class="secondary">
+              <details class="code-example">
+                <summary>catchErrors</summary>
+                <pre><code>import { Request, Response, NextFunction } from 'express';
+
+const catchErrors = (fn: Function) => async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+): Promise&lt;Function | void&gt; => {
+  try {
+    return await fn(req, res, next);
+  } catch (error) {
+    return next(error);
+  }
+};
+
+export default catchErrors;</code></pre>
+              </details>
               <a href="https://github.com/KalinkinFiz" target="_blank"
                 ><img
                   src="./assets/github.svg"
                   alt="Image-link to Github account"
-              /></a>
-              <a href="https://vk.com/kalinkin_fiz" target="_blank"
-                ><img src="./assets/vk.svg" alt="Image-link to VK account"
-              /></a>
-            </p>
-          </address>
-        </div>
-      </header>
-      <article>
-        <h2>About me</h2>
-        <p class="secondary">
-          Immediately after school, he entered the specialty “Physics and
-          Informatics” at the Belarusian State Pedagogical University, which he
-          graduated in 2017. For continuing education and a more in-depth study
-          of computer science, he entered the magistracy. I am currently
-          studying in depth distributed information systems and network
-          technologies.
-        </p>
-        <section>
-          <h2>Education</h2>
-          <p class="main-education">
-            <strong
-              >MASTER, TEACHING AND EDUCATION METHODOLOGY (INFORMATICS)</strong
-            >
-            <br />Belarusian State Pedagogical University named after Maxim Tank
-            (BSPU) Thesis title: Technological competence of future teachers of
-            physics and informatics when working with laboratory stands
-            <span class="date">2017 - 2018</span>
-          </p>
+                />
+                GitHub</a
+              >
+            </div>
+          </section>
 
-          <p class="main-education">
-            <strong>BSc, PHYSICS AND INFORMATICS</strong> <br />
-            Belarusian State Pedagogical University named after Maxim Tank
-            (BSPU)
-            <span class="date">2013 - 2017</span>
-          </p>
-        </section>
+          <section>
+            <h2>Recent projects</h2>
+            <div class="projects">
+              <figure>
+                <a
+                  href="https://kalinkinfiz.github.io/momentum/"
+                  target="_blank"
+                >
+                  <img
+                    class="figure"
+                    src="./assets/momentum.png"
+                    alt="momentum"
+                  />
 
-        <section>
-          <h2>Work experience</h2>
-          <p class="main-education">
-            <strong>TEACHER «INFORMATICS»</strong> <br />
-            Lyceum №2, Minsk
-            <span class="date">2019 - Present</span>
-          </p>
+                  <figcaption>
+                    Momentum - аналог одноимённого приложения интернет-магазина
+                    Chrome. Перечень используемых технологий:
+                    <ol>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>SCSS</li>
+                      <li>JS Classes</li>
+                    </ol>
+                  </figcaption></a
+                >
+              </figure>
 
-          <p class="main-education">
-            <strong>LECTURER</strong> <br />
-            International university “MITSO”
-            <span class="date">2018 - Present</span>
-          </p>
+              <figure>
+                <a
+                  href="https://kalinkinfiz.github.io/wildlife/"
+                  target="_blank"
+                >
+                  <img
+                    class="figure"
+                    src="./assets/wildlife.png"
+                    alt="wildlife"
+                  />
 
-          <p class="main-education">
-            <strong>SOFTWARE ENGINEER</strong> <br />
-            Belarusian State Pedagogical University named after Maxim Tank
-            (BSPU)
-            <span class="date">2017 - 2019</span>
-          </p>
-        </section>
+                  <figcaption>
+                    Wildlife. <br />
+                    Необходимо было сверстать страницу согласно макету. Перечень
+                    используемых технологий:
+                    <ol>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                    </ol>
+                  </figcaption></a
+                >
+              </figure>
 
-        <section>
-          <h2>Skills</h2>
-          <div class="secondary">
-            <ul>
-              <li>HTML5/CSS3</li>
-              <li>JS (ES5, ES6)</li>
-              <li>Node.js</li>
-              <li>Java</li>
-              <li>C#</li>
-              <li>C++</li>
-            </ul>
-          </div>
-        </section>
+              <figure>
+                <a
+                  href="https://rolling-scopes-school.github.io/kalinkinfiz-JSFEPRESCHOOL/custom-video-player/"
+                  target="_blank"
+                >
+                  <img
+                    class="figure"
+                    src="./assets/custom-video-player.png"
+                    alt="custom-video-player"
+                  />
+                  <figcaption>
+                    Custom HTML5 Video Player - видеоплеер, внешний вид которого
+                    не зависит от используемого браузера или устройства.
+                    Перечень используемых технологий:
+                    <ol>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                    </ol>
+                  </figcaption></a
+                >
+              </figure>
 
-        <section>
-          <h2>Code</h2>
-          <div class="secondary">
-            <a href="https://github.com/KalinkinFiz" target="_blank"
-              ><img
-                src="./assets/github.svg"
-                alt="Image-link to Github account"
-              />
-              GitHub</a
-            >
-          </div>
-        </section>
+              <figure>
+                <a
+                  href="https://rolling-scopes-school.github.io/kalinkinfiz-JSFEPRESCHOOL/js30-part1/"
+                  target="_blank"
+                >
+                  <img
+                    class="figure"
+                    src="./assets/vertical-slider.png"
+                    alt="vertical-slider"
+                  />
 
-        <section>
-          <h2>English level</h2>
-          <p><strong>Pre-intermediate</strong></p>
-        </section>
-      </article>
+                  <figcaption>
+                    Vertical Slider - вертикальный слайдер на JavaScript. <br />
+                    Перечень используемых технологий:
+                    <ol>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                    </ol>
+                  </figcaption></a
+                >
+              </figure>
+
+              <figure>
+                <a
+                  href="https://rolling-scopes-school.github.io/kalinkinfiz-JSFEPRESCHOOL/museum/"
+                  target="_blank"
+                >
+                  <img class="figure" src="./assets/museum.png" alt="museum" />
+
+                  <figcaption>
+                    Museum - landing page Лувра, свестранный на этапе stage0
+                    RSS. <br />
+                    Перечень используемых технологий:
+                    <ol>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                    </ol>
+                  </figcaption></a
+                >
+              </figure>
+            </div>
+          </section>
+
+          <section>
+            <h2>English level</h2>
+            <p><strong>Pre-intermediate</strong></p>
+          </section>
+        </article>
+      </main>
       <hr />
       <footer>
         <ul class="contacts">
