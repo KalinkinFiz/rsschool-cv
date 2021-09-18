@@ -9,6 +9,7 @@ body {
   line-height: 160%;
   font-family: "Open Sans", "Tahoma", sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 
 body:last-child {
@@ -41,6 +42,58 @@ h2 {
 }
 
 .navigation {
+  position: relative;
+}
+
+.navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-item {
+  position: relative;
+  margin-left: 16px;
+}
+
+.navigation-item a {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  transition: 0.2s all ease;
+}
+
+.navigation-item a:hover {
+  color: #9d8665;
+}
+
+.navigation-overlay {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navigation-burger {
+  position: relative;
+  z-index: 1000;
+  width: 50px;
+  cursor: pointer;
+  transition: 0.25s transform ease;
+}
+
+.navigation-burger .open {
+  transform: rotate(90deg);
+}
+
+.navigation-burger .open svg line {
+  stroke: #fff;
+}
+
+/* .navigation {
   max-width: 1024px;
   flex-grow: 1;
 }
@@ -59,7 +112,7 @@ h2 {
 
 .navigation-item a:hover {
   color: #9d8665;
-}
+} */
 
 .secondary,
 .secondary a,
@@ -170,9 +223,62 @@ ul.contacts li.icons {
   width: 30px;
 }
 
-@media (max-width: 1024px) {
+@media screen and (min-width: 1182px) {
+  .navigation {
+    transform: translate(0) !important;
+    transition-property: none !important;
+  }
+  .navigation-overlay {
+    display: none;
+  }
+  .navigation-burger {
+    display: none;
+  }
+}
+
+@media (max-width: 1181px) {
   header {
     text-align: center;
+  }
+
+  .navigation {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #292929;
+    padding-top: 0;
+    transform: translateX(100%);
+  }
+
+  .navigation-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation-item {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+
+  .navigation-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .navigation-item a {
+    font-size: 26px;
+    line-height: 51px;
+    color: #fff;
+    transition-property: none;
+  }
+
+  .navigation-burger {
+    display: block;
   }
 
   .projects {

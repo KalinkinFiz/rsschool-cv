@@ -22,7 +22,7 @@
   <body>
     <div class="content">
       <header>
-        <nav class="navigation">
+        <nav id="navigation" class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
               <a href="#about-me">ABOUT ME</a>
@@ -43,6 +43,19 @@
             </li>
           </ul>
         </nav>
+        <div id="navigation-burger" class="navigation-burger">
+          <svg
+            width="30"
+            height="22"
+            viewBox="0 0 30 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="21" x2="30" y2="21" stroke="black" stroke-width="2" />
+            <line y1="11" x2="30" y2="11" stroke="black" stroke-width="2" />
+            <line y1="1" x2="30" y2="1" stroke="black" stroke-width="2" />
+          </svg>
+        </div>
         <img
           class="photo"
           src="./assets/kalinin.jpg"
@@ -194,13 +207,14 @@ export default catchErrors;</code></pre>
                 /></a>
 
                 <figcaption>
-                  Momentum - аналог
+                  Momentum is an analogue
                   <a
                     href="https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca?hl=ru"
                     target="_blank"
-                    >одноимённого приложения</a
+                    >of the app of the same name</a
                   >
-                  интернет-магазина Chrome. Перечень используемых технологий:
+                  in the Chrome web store. <br />
+                  List of technologies used:
                   <ol>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -223,8 +237,9 @@ export default catchErrors;</code></pre>
 
                 <figcaption>
                   Wildlife. <br />
-                  Необходимо было сверстать страницу согласно макету. Перечень
-                  используемых технологий:
+                  It was necessary to lay out the page according to the layout.
+                  <br />
+                  List of technologies used:
                   <ol>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -244,9 +259,9 @@ export default catchErrors;</code></pre>
                 /></a>
 
                 <figcaption>
-                  Custom HTML5 Video Player - видеоплеер, внешний вид которого
-                  не зависит от используемого браузера или устройства. Перечень
-                  используемых технологий:
+                  Custom HTML5 Video Player - a video player whose appearance
+                  does not depend on the browser or device used. <br />
+                  List of technologies used:
                   <ol>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -267,8 +282,8 @@ export default catchErrors;</code></pre>
                 /></a>
 
                 <figcaption>
-                  Vertical Slider - вертикальный слайдер на JavaScript. <br />
-                  Перечень используемых технологий:
+                  Vertical Slider is a JavaScript vertical slider. <br />
+                  List of technologies used:
                   <ol>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -286,9 +301,9 @@ export default catchErrors;</code></pre>
                 /></a>
 
                 <figcaption>
-                  Museum - landing page Лувра, свестранный на этапе stage0 RSS.
+                  Museum - Louvre's landing page stage0 RSS.
                   <br />
-                  Перечень используемых технологий:
+                  List of technologies used:
                   <ol>
                     <li>HTML</li>
                     <li>CSS</li>
@@ -332,5 +347,6 @@ export default catchErrors;</code></pre>
         </ul>
       </footer>
     </div>
+    <script src="./navigation.js"></script>
   </body>
 </html>
