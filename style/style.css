@@ -69,7 +69,7 @@ h2 {
 
 .navigation-overlay {
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
   top: 0;
   bottom: 0;
   left: 0;
@@ -281,15 +281,33 @@ ul.contacts li.icons {
     display: block;
   }
 
+  .code {
+    font-size: 18px;
+    padding: 0;
+  }
+
   .projects {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+@media (max-width: 770px) {
+  .code {
+    font-size: 12px;
+    line-height: 10px;
+  }
+  
 }
 
 @media (max-width: 585px) {
   h1 {
     font-size: 250%;
     line-height: 100%;
+  }
+
+  .code {
+    font-size: 7px;
+    line-height: 10px;
   }
 
   .photo {
