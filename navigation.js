@@ -4,14 +4,20 @@ class Navigation {
     this.burgerElement = document.getElementById("navigation-burger");
 
     this.isOpen = false;
-    this.overlay = document.createElement("div", null, {
-      classes: ["navigation-overlay"],
-    });
+
+    this.overlay = document.createElement("div");
+    this.overlay.className = "navigation-overlay";
   }
 
   init() {
     this.burgerElement.addEventListener("click", () => this.toggle());
     this.overlay.addEventListener("click", () => this.close());
+
+    this.navigationElement.addEventListener("click", () => {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      this.close();
+    });
   }
 
   open() {
