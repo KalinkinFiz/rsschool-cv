@@ -13,10 +13,8 @@ class Navigation {
     this.burgerElement.addEventListener("click", () => this.toggle());
     this.overlay.addEventListener("click", () => this.close());
 
-    this.navigationElement.addEventListener("click", () => {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-      this.close();
+    this.navigationElement.querySelectorAll("a").forEach((el) => {
+      el.addEventListener("click", (e) => this.close());
     });
   }
 
